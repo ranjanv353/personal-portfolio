@@ -6,6 +6,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { toast } from "@/components/ui/use-toast"
 
+const SERVICE_ID = "service_4lstosb"
+const TEMPLATE_ID = "template_2bt1z4a"
+const PUBLIC_KEY = "q_MkNOn0mqGE8-vM5"
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
@@ -19,11 +23,11 @@ export default function ContactForm() {
     if (!formRef.current) return
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+        SERVICE_ID,
+        TEMPLATE_ID,
         formRef.current,
         {
-          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string,
+          publicKey: PUBLIC_KEY,
         }
       )
       .then(() => {

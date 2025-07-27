@@ -8,7 +8,12 @@ import { Github, Linkedin, Code, Download, Mail, MapPin, ExternalLink, Calendar,
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { toast } from "@/components/ui/use-toast"
 import ContactForm from "@/components/contact-form"
+
+const SERVICE_ID = "service_4lstosb"
+const TEMPLATE_ID = "template_2bt1z4a"
+const PUBLIC_KEY = "q_MkNOn0mqGE8-vM5"
 
 export default function Portfolio() {
   const [isVisible, setIsVisible] = useState(false)
@@ -432,19 +437,19 @@ function ContactForm() {
     if (!formRef.current) return
     emailjs
       .sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+        SERVICE_ID,
+        TEMPLATE_ID,
         formRef.current,
         {
-          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string,
+          publicKey: PUBLIC_KEY,
         }
       )
       .then(() => {
-        console.log("Email sent")
+        toast({ title: "Message sent" })
         setFormData({ name: "", email: "", message: "" })
       })
-      .catch((error) => {
-        console.error("Email error:", error)
+      .catch(() => {
+        toast({ title: "Failed to send", variant: "destructive" })
       })
   }
 
