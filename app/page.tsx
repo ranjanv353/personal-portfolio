@@ -8,6 +8,7 @@ import { Github, Linkedin, Code, Download, Mail, MapPin, ExternalLink, Calendar,
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import ContactForm from "@/components/contact-form"
 
 export default function Portfolio() {
   const [isVisible, setIsVisible] = useState(false)
@@ -397,7 +398,6 @@ function ProjectCard({
     </Card>
   )
 }
-
 function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
