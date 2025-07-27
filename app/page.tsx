@@ -51,37 +51,49 @@ export default function Portfolio() {
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Button
+              asChild
               variant="outline"
               size="lg"
               className="border-[#3F51B5] text-[#3F51B5] hover:bg-[#3F51B5] hover:text-white transition-all duration-300 bg-transparent"
             >
-              <Github className="mr-2 h-5 w-5" />
-              GitHub
+              <a href="https://github.com/ranjanv353/">
+                <Github className="mr-2 h-5 w-5" />
+                GitHub
+              </a>
             </Button>
             <Button
+              asChild
               variant="outline"
               size="lg"
               className="border-[#3F51B5] text-[#3F51B5] hover:bg-[#3F51B5] hover:text-white transition-all duration-300 bg-transparent"
             >
-              <Linkedin className="mr-2 h-5 w-5" />
-              LinkedIn
+              <a href="https://www.linkedin.com/in/ranjanv353/">
+                <Linkedin className="mr-2 h-5 w-5" />
+                LinkedIn
+              </a>
             </Button>
             <Button
+              asChild
               variant="outline"
               size="lg"
               className="border-[#8A2BE2] text-[#8A2BE2] hover:bg-[#8A2BE2] hover:text-white transition-all duration-300 bg-transparent"
             >
-              <Code className="mr-2 h-5 w-5" />
-              LeetCode
+              <a href="https://leetcode.com/u/ranjanv353/">
+                <Code className="mr-2 h-5 w-5" />
+                LeetCode
+              </a>
             </Button>
           </div>
 
           <Button
+            asChild
             size="lg"
             className="bg-gradient-to-r from-[#3F51B5] to-[#8A2BE2] hover:from-[#3F51B5]/80 hover:to-[#8A2BE2]/80 transition-all duration-300 transform hover:scale-105"
           >
-            <Download className="mr-2 h-5 w-5" />
-            Download Resume
+            <a href="/resume.pdf" download>
+              <Download className="mr-2 h-5 w-5" />
+              Download Resume
+            </a>
           </Button>
         </div>
       </section>
@@ -267,25 +279,34 @@ export default function Portfolio() {
                 </div>
                 <div className="flex space-x-4 mt-6">
                   <Button
+                    asChild
                     variant="outline"
                     size="sm"
                     className="border-[#3F51B5] text-[#3F51B5] hover:bg-[#3F51B5] hover:text-white bg-transparent"
                   >
-                    <Linkedin className="h-5 w-5" />
+                    <a href="https://www.linkedin.com/in/ranjanv353/">
+                      <Linkedin className="h-5 w-5" />
+                    </a>
                   </Button>
                   <Button
+                    asChild
                     variant="outline"
                     size="sm"
                     className="border-[#3F51B5] text-[#3F51B5] hover:bg-[#3F51B5] hover:text-white bg-transparent"
                   >
-                    <Github className="h-5 w-5" />
+                    <a href="https://github.com/ranjanv353/">
+                      <Github className="h-5 w-5" />
+                    </a>
                   </Button>
                   <Button
+                    asChild
                     variant="outline"
                     size="sm"
                     className="border-[#8A2BE2] text-[#8A2BE2] hover:bg-[#8A2BE2] hover:text-white bg-transparent"
                   >
-                    <Code className="h-5 w-5" />
+                    <a href="https://leetcode.com/u/ranjanv353/">
+                      <Code className="h-5 w-5" />
+                    </a>
                   </Button>
                 </div>
               </div>
