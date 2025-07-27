@@ -56,7 +56,7 @@ export default function Portfolio() {
               size="lg"
               className="border-[#3F51B5] text-[#3F51B5] hover:bg-[#3F51B5] hover:text-white transition-all duration-300 bg-transparent"
             >
-              <a href="https://github.com/ranjanv353/">
+              <a href="https://github.com/ranjanv353/" target="_blank" rel="noopener noreferrer">
                 <Github className="mr-2 h-5 w-5" />
                 GitHub
               </a>
@@ -67,7 +67,7 @@ export default function Portfolio() {
               size="lg"
               className="border-[#3F51B5] text-[#3F51B5] hover:bg-[#3F51B5] hover:text-white transition-all duration-300 bg-transparent"
             >
-              <a href="https://www.linkedin.com/in/ranjanv353/">
+              <a href="https://www.linkedin.com/in/ranjanv353/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="mr-2 h-5 w-5" />
                 LinkedIn
               </a>
@@ -78,7 +78,7 @@ export default function Portfolio() {
               size="lg"
               className="border-[#8A2BE2] text-[#8A2BE2] hover:bg-[#8A2BE2] hover:text-white transition-all duration-300 bg-transparent"
             >
-              <a href="https://leetcode.com/u/ranjanv353/">
+              <a href="https://leetcode.com/u/ranjanv353/" target="_blank" rel="noopener noreferrer">
                 <Code className="mr-2 h-5 w-5" />
                 LeetCode
               </a>
@@ -90,7 +90,7 @@ export default function Portfolio() {
             size="lg"
             className="bg-gradient-to-r from-[#3F51B5] to-[#8A2BE2] hover:from-[#3F51B5]/80 hover:to-[#8A2BE2]/80 transition-all duration-300 transform hover:scale-105"
           >
-            <a href="/resume.pdf" download>
+            <a href="/VishalRanjan_resume.pdf" target="_blank" rel="noopener noreferrer">
               <Download className="mr-2 h-5 w-5" />
               Download Resume
             </a>
@@ -284,7 +284,7 @@ export default function Portfolio() {
                     size="sm"
                     className="border-[#3F51B5] text-[#3F51B5] hover:bg-[#3F51B5] hover:text-white bg-transparent"
                   >
-                    <a href="https://www.linkedin.com/in/ranjanv353/">
+                    <a href="https://www.linkedin.com/in/ranjanv353/" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="h-5 w-5" />
                     </a>
                   </Button>
@@ -294,7 +294,7 @@ export default function Portfolio() {
                     size="sm"
                     className="border-[#3F51B5] text-[#3F51B5] hover:bg-[#3F51B5] hover:text-white bg-transparent"
                   >
-                    <a href="https://github.com/ranjanv353/">
+                    <a href="https://github.com/ranjanv353/" target="_blank" rel="noopener noreferrer">
                       <Github className="h-5 w-5" />
                     </a>
                   </Button>
@@ -304,7 +304,7 @@ export default function Portfolio() {
                     size="sm"
                     className="border-[#8A2BE2] text-[#8A2BE2] hover:bg-[#8A2BE2] hover:text-white bg-transparent"
                   >
-                    <a href="https://leetcode.com/u/ranjanv353/">
+                    <a href="https://leetcode.com/u/ranjanv353/" target="_blank" rel="noopener noreferrer">
                       <Code className="h-5 w-5" />
                     </a>
                   </Button>
