@@ -2,7 +2,8 @@
 
 import type React from "react"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
+import emailjs from "@emailjs/browser"
 import { Github, Linkedin, Code, Download, Mail, MapPin, ExternalLink, Calendar, Award } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -403,11 +404,27 @@ function ContactForm() {
     email: "",
     message: "",
   })
+  const formRef = useRef<HTMLFormElement>(null)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
+    if (!formRef.current) return
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
+        formRef.current,
+        {
+          publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string,
+        }
+      )
+      .then(() => {
+        console.log("Email sent")
+        setFormData({ name: "", email: "", message: "" })
+      })
+      .catch((error) => {
+        console.error("Email error:", error)
+      })
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -423,7 +440,7 @@ function ContactForm() {
         <CardTitle className="text-xl text-white">Send a Message</CardTitle>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
           <div>
             <input
               type="text"
